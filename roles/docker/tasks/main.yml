@@ -1,0 +1,22 @@
+---
+- name: DOCKER | Install Docker
+  become: true
+  package:
+      state: present 
+      name: "{{item}}"
+  with_items:
+    "{{ dockerpkg }}"
+
+- name: DOCKER | add User to dockergroup
+  become: true
+  user:
+    name: alex
+    groups: docker
+    append: yes
+
+- name: DOCKER | Enable Dockerservice
+  become: true
+  systemd:
+      name: docker 
+      enabled: true 
+      state: started

@@ -1,0 +1,11 @@
+---
+- name: NVIDIA | dnf - Install Nvidia
+  become: true
+  package:
+      state: present 
+      name: "{{item}}"
+  with_items:
+    "{{ nvidiapkg }}"
+
+
+# TODO VDPAU/VAAPI, Vulkan

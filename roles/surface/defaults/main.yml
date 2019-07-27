@@ -1,0 +1,157 @@
+---
+# Base Role Task aci_switch_leaf_selector
+base_nvidia: true
+base_flatpaks: true
+base_configure:
+  enable: true
+  setInotify: true
+base_lutris:
+  enable: true
+  postconfig: true
+  flatpak: false
+base_rpmfusion: true
+base_surface: false
+base_dconf: true
+
+basepkg:
+  - tilix
+  - gnome-tweak-tool
+  - python3-psutil
+
+optpkg:
+
+# Flatpak configuration
+
+flatpak_gnome: true
+
+flatpak_bundle_gnome:
+  - com.github.wwmm.pulseeffects
+  - org.gabmus.hydrapaper
+  - org.gimp.GIMP
+  - org.gnome.Boxes
+  - org.gnome.Builder
+  - org.gnome.Calculator
+  - org.gnome.Calendar
+  - org.gnome.Evince
+  - org.gnome.Evolution
+  - org.gnome.Geary
+  - org.gnome.PasswordSafe
+  - org.gnome.Platform
+  - org.gnome.Platform
+  - org.gnome.Rhythmbox3
+  - org.gnome.Music
+  - org.gnome.Sdk
+  - org.gnome.Shotwell
+  - org.gnome.Todo
+  - org.gnome.Totem
+  - org.gnome.Totem.Codecs
+  - org.remmina.Remmina
+  - org.filezillaproject.Filezilla
+  - com.transmissionbt.Transmission
+  - me.kozec.syncthingtk
+  - org.nextcloud.Nextcloud
+
+flatpak_themes: true
+
+flatpak_bundle_themes:
+  - org.gtk.Gtk3theme.Arc-Dark
+  - org.kde.KStyle.Adwaita
+
+flatpak_multimedia: true
+
+flatpak_bundle_multimedia:
+  - com.spotify.Client
+  - fr.handbrake.ghb
+  - com.makemkv.MakeMKV
+  - org.videolan.VLC
+  - org.videolan.VLC.Plugin.bdj
+  - org.videolan.VLC.Plugin.fdkaac
+  - org.videolan.VLC.Plugin.makemkv
+  - org.inkscape.Inkscape
+  - org.kde.kdenliv
+
+flatpak_messaging: true
+
+flatpak_bundle_messaging:
+  - org.signal.Signal
+  - org.telegram.deskto
+
+flatpak_office: true
+
+flatpak_bundle_office:
+  - net.xmind.XMind8
+  - org.libreoffice.LibreOffice
+
+flatpak_design: true
+
+flatpak_bundle_design:
+  - org.gimp.GIMP
+
+flatpak_gaming: true
+
+flatpak_bundle_gaming:
+  - com.discordapp.Discord
+  - com.valvesoftware.Steam
+  - com.obsproject.Studio
+
+flatpak_development: true
+
+flatpak_bundle_development:
+  - com.visualstudio.code
+
+flatpak_synctools: true
+flatpak_bundle_synctools:
+
+
+
+# Gsettings/dconf
+gsettings:
+  tap-to-click:
+    key: /org/gnome/desktop/peripherals/touchpad/tap-to-click
+    value: "true"
+  show-battery-percentage:
+    key: /org/gnome/desktop/interface/show-battery-percentage
+    value: "true"
+  natural-scroll:
+    key: /org/gnome/desktop/peripherals/touchpad/natural-scroll
+    value: "false"
+  night-light:
+    key: /org/gnome/settings-daemon/plugins/color/night-light-enabled
+    value: "true"
+  night-light-temperature:
+    key: /org/gnome/settings-daemon/plugins/color/night-light-temperature
+    value: 4500
+  night-light-automatic:
+    key: /org/gnome/settings-daemon/plugins/color/night-light-automatic
+    value: "true"
+  ambient-enabled:
+    key: /org/gnome/settings-daemon/plugins/power/ambient-enabled
+    value: "false"
+  switch-ws1:
+    key: /org/gnome/desktop/wm/keybindings/switch-to-workspace-1
+    value: "['<ALT>1']"
+  switch-ws2:
+    key: /org/gnome/desktop/wm/keybindings/switch-to-workspace-2
+    value: "['<ALT>2']"
+  switch-ws3:
+    key: /org/gnome/desktop/wm/keybindings/switch-to-workspace-3
+    value: "['<ALT>3']"
+  switch-ws4:
+    key: /org/gnome/desktop/wm/keybindings/switch-to-workspace-4
+    value: "['<ALT>4']"
+  move-ws1:
+    key: /org/gnome/desktop/wm/keybindings/move-to-workspace-1
+    value: "['<ALT><SHIFT>1']"
+  move-ws2:
+    key: /org/gnome/desktop/wm/keybindings/move-to-workspace-2
+    value: "['<ALT><SHIFT>2']"
+  move-ws3:
+    key: /org/gnome/desktop/wm/keybindings/move-to-workspace-3
+    value: "['<ALT><SHIFT>3']"
+  move-ws4:
+    key: /org/gnome/desktop/wm/keybindings/move-to-workspace-4
+    value: "['<ALT><SHIFT>4']"
+  button-layout:
+    key: /org/gnome/desktop/wm/preferences/button-layout
+    value: "'appmenu:minimize,maximize,close'"
+  #todo default applications

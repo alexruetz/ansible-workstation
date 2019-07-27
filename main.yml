@@ -1,0 +1,12 @@
+---
+- name: 'Main'
+  hosts: localhost
+  gather_facts: true
+  roles:
+    - {role: repos, tags: ["repos"] } 
+    - {role: base, tags: ["base"]}
+#    - {role: surface, tags: ["surface"]}
+    - {role: dconf, tags: ["dconf"]}
+    - {role: docker, tags: ["docker"]}
+    - {role: flatpak, tags: ["flatpak"]}
+    - {role: nvidia, tags: ["nvidia"]}

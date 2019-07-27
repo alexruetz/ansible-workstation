@@ -1,0 +1,20 @@
+---
+basepkg:
+#  - tilix
+  - gnome-tweak-tool
+  - python3-psutil
+  - code
+  - wine
+  - lutris
+  - steam
+  - enpass
+  - podman
+  - toolbox
+  - vim
+  - vlc
+  - "@multimedia"
+  - geary
+
+optpkg:
+  - code #platzhalter
+

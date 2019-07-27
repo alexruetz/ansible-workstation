@@ -1,0 +1,10 @@
+---
+
+nvidiapkg:
+  - akmod-nvidia 
+  - xorg-x11-drv-nvidia
+  - vdpauinfo
+  - libva-vdpau-driver
+  - libva-utils
+  - vulkan
+  - vulkan-tools

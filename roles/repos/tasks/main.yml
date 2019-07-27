@@ -1,0 +1,16 @@
+---
+- name: REPO | Install RPM Fusion (via dnf)
+  shell: |
+    sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+- name: REPO | Install Surface Repo
+  shell: |
+    sudo dnf config-manager --add-repo=https://tmsp.io/fs/repos/fedora/linux-surface/linux-surface.repo
+- name: REPO | Install VSCode Repo
+  shell: |
+    sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+- name: REPO | Install Enpass Repo
+  shell: |
+    sudo dnf config-manager --add-repo=https://yum.enpass.io/enpass-yum.repo
+- name: REPO | Install Docker Repo
+  shell: |
+    sudo dnf config-manager --add-repo=https://download.docker.com/linux/fedora/docker-ce.repo

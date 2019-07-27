@@ -1,0 +1,9 @@
+---
+- name: Change dconf settings
+  dconf:
+    key: "{{ item.value.key }}"
+    state: present
+    value: "{{ item.value.value }}"
+  with_dict: "{{ gsettings if gsettings_extra is not defined else gsettings|combine(gsettings_extra)}}"
+  tags:
+    - dconf

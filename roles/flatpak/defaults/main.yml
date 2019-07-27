@@ -1,0 +1,6 @@
+---
+flatpakpkg:
+  - com.spotify.Client
+  - com.discordapp.Discord
+  - com.mojang.Minecraft  
+
